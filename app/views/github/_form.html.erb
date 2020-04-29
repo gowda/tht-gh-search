@@ -1,0 +1,11 @@
+<div class='col-12 pl-0'>
+  <%= form_for :search, url: '/search', method: 'get', html: { class: 'form-inline' } do |form| %>
+    <%= form.text_field :q,
+                        value: params[:q],
+                        name: 'q',
+                        id: 'search',
+                        class: 'form-control w-50 mr-4',
+                        autocomplete: 'off' %>
+    <%= form.submit 'Search', name: nil, class: 'btn btn-primary' %>
+  <% end %>
+</div>

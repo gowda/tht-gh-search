@@ -11,7 +11,14 @@
   <body>
     <div class='container'>
       <div class='row'>
-        <h4>Search GitHub</h4>
+        <div class='col-auto pl-0 mt-4 pb-2'>
+          <h4>Search GitHub</h4>
+        </div>
+      </div>
+      <div class='row'>
+        <% flash.each do |type, message| %>
+          <div class="col-12 alert alert-<%= type %>"><%= message %></div>
+        <% end %>
       </div>
       <div class='row'>
         <%= yield %>

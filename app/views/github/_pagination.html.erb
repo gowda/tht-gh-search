@@ -1,0 +1,15 @@
+<div class='row w-100 mb-4'>
+  <div class="btn-group ml-auto mr-0" role="group" aria-label="Basic example">
+    <a href="<%= search_path(q: params[:q], page: 'prev') %>"
+       type="button"
+       class="btn btn-outline-primary <%= session[:prev].nil? ? 'disabled' : '' %>">
+      Previous
+    </a>
+    <a
+      href="<%= search_path(q: params[:q], page: 'next') %>"
+      type="button"
+      class="btn btn-outline-primary <%= session[:next].nil? ? 'disabled' : '' %>">
+      Next
+    </a>
+  </div>
+</div>

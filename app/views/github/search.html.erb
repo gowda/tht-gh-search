@@ -1,0 +1,16 @@
+<div class='row w-100 ml-0 mb-4 mt-4'>
+  <%= render partial: 'github/form' %>
+</div>
+<div class='row w-100 ml-0'>
+  Found <%= pluralize(@results.total_count, 'repository') %> on GitHub
+</div>
+
+<div class='row w-100 ml-0 mt-4 mb-4'>
+  <div class='col-12 pl-0'>
+    <div class='list-group list-group-flush results'>
+      <%= render partial: 'github/repo', collection: @results.items %>
+    </div>
+  </div>
+</div>
+
+<%= render partial: 'github/pagination' %>

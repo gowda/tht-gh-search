@@ -1,4 +1,3 @@
-<%= form_for :search, url: '/search', html: { class: 'form-inline' } do |form| %>
-  <%= form.text_field :q, value: nil, name: 'search', class: 'form-control mr-4' %>
-  <%= form.submit 'Search', class: 'btn btn-primary' %>
-<% end %>
+<div class='row w-100 ml-0'>
+  <%= render partial: 'github/form' %>
+</div>

@@ -6,6 +6,8 @@ AllCops:
     - 'tmp/**/*'
     - 'db/**/*'
 Layout/LineLength:
+  Exclude:
+    - 'spec/**/*_helper.rb'
   IgnoredPatterns: ['\A\s*#']
 Style/Documentation:
   Enabled: false
@@ -25,3 +27,8 @@ Style/HashTransformKeys:
   Enabled: true
 Style/HashTransformValues:
   Enabled: true
+Naming/VariableNumber:
+  EnforcedStyle: snake_case
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*.rb'
