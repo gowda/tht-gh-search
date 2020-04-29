@@ -11,9 +11,9 @@ gem 'activesupport', rails_version
 gem 'railties', rails_version
 gem 'sprockets-rails', '>= 2.0.0'
 
-gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 4.1'
 gem 'sass-rails', '>= 6'
+gem 'sqlite3', '~> 1.4.0'
 
 gem 'bootstrap', '~> 4.4.1'
 
@@ -26,7 +26,6 @@ end
 group :test do
   gem 'capybara'
   gem 'rails-controller-testing'
-  gem 'sqlite3', '~> 1.4.0'
 end
 
 group :development do

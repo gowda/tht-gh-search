@@ -22,3 +22,6 @@
 
 # RubyMine
 .idea
+
+# sqlite3 databases
+db/*.sqlite3

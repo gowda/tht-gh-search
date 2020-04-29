@@ -1,16 +1,12 @@
 default: &default
-  adapter: postgresql
-  encoding: unicode
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  adapter: sqlite3
 
 development:
   <<: *default
-  database: tht_gh_search_development
+  database: db/development.sqlite3
 test:
   adapter: sqlite3
   database: ':memory:'
 production:
   <<: *default
-  database: tht_gh_search_production
-  username: tht_gh_search
-  password: <%= ENV['THT_GH_SEARCH_DATABASE_PASSWORD'] %>
+  database: db/production.sqlite3
