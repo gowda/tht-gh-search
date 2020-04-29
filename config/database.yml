@@ -8,5 +8,7 @@ test:
   adapter: sqlite3
   database: ':memory:'
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch('RAILS_MAX_THREADS') { 5 } %>
+  database: tht_gh_search_production
