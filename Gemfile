@@ -15,10 +15,17 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 4.1'
 gem 'sass-rails', '>= 6'
 
+gem 'bootstrap', '~> 4.4.1'
+
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'rspec-rails', '~> 3.9.0'
+  gem 'rspec-rails', '~> 4.0.0'
   gem 'rubocop', require: false
+end
+
+group :test do
+  gem 'capybara'
+  gem 'rails-controller-testing'
 end
 
 group :development do
