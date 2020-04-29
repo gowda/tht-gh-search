@@ -2,4 +2,5 @@
 
 Rails.application.routes.draw do
   root 'github#index'
+  get 'search', to: 'github#search'
 end

@@ -1,0 +1,59 @@
+
+<div class='list-group-item repo'>
+  <div class='row'>
+    <div class='col-12'>
+      <div class='row'>
+        <div class='col-auto'>
+          <%= octicon 'repo-forked' %>
+        </div>
+
+        <div class='col-11'>
+          <div class='row'>
+            <div class='col-auto'>
+              <a href="<%= repo.html_url %>">
+                <strong><%= repo.full_name %></strong>
+              </a>
+            </div>
+          </div>
+
+          <div class='row'>
+            <div class='col-auto'>
+              <p><%= repo.description %></p>
+            </div>
+          </div>
+
+          <div class='row text-muted'>
+            <% unless repo.language.blank? %>
+              <div class='col-auto'>
+                <%= octicon 'primitive-dot' %>
+                <small class='ml-1'><%= repo.language %></small>
+              </div>
+            <% end %>
+            <div class='col-auto'>
+              <%= octicon 'repo-forked' %>
+              <small class='ml-1'><%= repo.forks %></small>
+            </div>
+            <div class='col-auto'>
+              <%= octicon 'star' %>
+              <small class='ml-1'><%= repo.stargazers_count %></small>
+            </div>
+            <div class='col-auto'>
+              <%= octicon 'issue-opened' %>
+              <small class='ml-1'><%= repo.open_issues_count %></small>
+            </div>
+            <div class='col-auto'>
+              <%= octicon 'eye' %>
+              <small class='ml-1'><%= repo.watchers_count %></small>
+            </div>
+          </div>
+
+          <div class='row text-muted'>
+            <div class='col-auto'>
+              <small class='ml-1'>Updated <%= time_ago_in_words(repo.updated_at) %></small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

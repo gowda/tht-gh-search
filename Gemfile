@@ -17,8 +17,12 @@ gem 'sass-rails', '>= 6'
 
 gem 'bootstrap', '~> 4.4.1'
 
+gem 'octicons_helper'
+gem 'octokit', '~> 4.0'
+
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'dotenv-rails'
   gem 'rspec-rails', '~> 4.0.0'
   gem 'rubocop', require: false
   gem 'sqlite3', '~> 1.4.0'
