@@ -1,11 +1,18 @@
-# tht-gh-search
+# tht-gh-search ![test-and-deploy](https://github.com/gowda/tht-gh-search/workflows/test-and-deploy/badge.svg)
 
 search github to find public repositories from the term
 
+[Demo on Heroku](https://tht-gh-search.herokuapp.com)
+
 ## Run
-### Server
+### Setup
 ```bash
 $ bundle install
+$ bin/setup
+```
+
+### Server
+```bash
 $ bin/rails server
 ```
 
@@ -26,4 +33,4 @@ $ bundle exec rubocop
 ```
 
 ## Author
-Basavanagowda Kanur
+Basavanagowda Kanur <basavanagowda@gmail.com>
