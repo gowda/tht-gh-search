@@ -44,4 +44,4 @@ jobs:
           git fetch --unshallow origin
           git push $HEROKU_URL master:master
         env:
-          HEROKU_URL: "${{ env.HEROKU_BASE_URL }}/${{ secrets.HEROKU_APP_NAME }}.git
+          HEROKU_URL: "${{ env.HEROKU_BASE_URL }}/${{ secrets.HEROKU_APP_NAME }}.git"
